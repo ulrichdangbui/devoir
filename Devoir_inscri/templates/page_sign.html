@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='sign.css') }}">
+    <link rel="stylesheet" href="sign.css">
+    <title>Sign</title>
+</head>
+<body>
+    <div class="container">
+        <div class="enter-name">
+            <h1>Just do it</h1>
+        </div>
+        <div class="enre">
+            <form action="{{ url_for('sign') }}" method="post">
+                <div class="mot_tete">
+                    <h1>Login</h1>
+                    <p>Enregistrer vous et découvrer une nouvelle expérience</p>
+                </div>
+                <div class="form">
+                    <span class="material-symbols-outlined">Nom</span>
+                    <input type="text" placeholder="Entrer votre nom" name="name" required>
+                </div>
+                <div class="form">
+                    <span class="material-symbols-outlined">Prenom</span>
+                    <input type="text" placeholder="Entrer votre prenom" name="surname" required>
+                </div>
+                <div class="form">
+                    <span class="material-symbols-rounded">mail</span>
+                    <input type="email" placeholder="Entrer votre mot de passe" name="email" pattern="[a-z0-9._%+-]+@gmail.com" required>
+                </div>
+                <div class="form">
+                    <span class="material-symbols-outlined">Mot de passe</span>
+                    <input type="text" placeholder="Entrer votre mot de passe" name="password" required>
+                </div>
+                <div class="form">
+                    <span class="material-symbols-outlined">Confirmation</span>
+                    <input type="text" placeholder="Confirmer le mot de passe" name="password2" required>
+                </div>
+                <button type="submit">
+                    <a href="{{ url_for('log') }}">Connexion</a></button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

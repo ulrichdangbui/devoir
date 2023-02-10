@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2? family= Itim & display=swap');
+
+body{
+    font-family: 'Poppins', sans-serif;
+    min-height: 100vh;
+    background-color: linear gradient(to right,rgb(16, 194, 218), rgb(161, 55, 23));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    width: 450px;
+    background: rgb(196, 193, 193);
+    padding: 4rem;
+    border-radius: 10px;
+    position: relative;
+
+
+}
+
+.container::before{
+    content: '';
+    position: absolute;
+    background-color: grey;
+    inset: 0;
+    transform: rotate(-5deg);
+    z-index: 1;
+}

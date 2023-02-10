@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body{
+font-family: 'Poppins' , sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 1.5rem;
+}
+
+body ::after{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    height: 100vh;
+    clip-path: polygon(0 100%,0 0,70% 0,30% 100%);
+    z-index: -1;
+}
+
+.carte{
+    background-color: white;
+    border: 1px solid;
+    box-shadow: black;
+    width: 1200px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.colonne{
+    padding: 4rem;
+}
+.colonne :last-child{
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: column;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+a{
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all.3s;
+    font-weight: 600;
+
+}
+
+a:hover{
+    background-color: #f1f1f1;
+    color: rgb(105, 112, 105);
+}
+
+a:last-child{
+    text-align: center;
+}
+
+.mail{
+    border-radius: 20px;
+}
+
+.mg{
+    padding-left: 20%;
+    padding-top: 5%;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.mail-bt{
+    width: 100%;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: box-shadow .2s;
+
+}
+
+.mail-bt:focus{
+        outline: none;
+        box-shadow: 0 0 0 2px black;
+    }
+
+
+form{
+    margin-top: 3rem;
+
+}
+form>*{
+        margin-top: 1rem;
+    }
+
+
+button{
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+button:active{
+    background-color: white;
+
+}
+
+input[type=checkbox] {
+    accent-color: cornflowerblue;
+    padding-top: 20px;
+}

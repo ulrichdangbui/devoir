@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon site</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="{{ url_for(' static ,filename='css/styles.css' ')}}">
+</head>
+<body>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Itim&display=swap');
+
+body{
+font-family: 'Poppins' , sans-serif;
+display: flex;
+align-items: center;
+justify-content: center;
+min-height: 100vh;
+padding: 1.5rem;
+}
+
+body ::after{
+    content: '';
+    position: fixed;
+    inset: 0;
+    background-color: black;
+    height: 100vh;
+    clip-path: polygon(0 100%,0 0,70% 0,30% 100%);
+    z-index: -1;
+}
+
+.carte{
+    background-color: white;
+    border: 1px solid;
+    box-shadow: black;
+    width: 1200px;
+    border-radius: 30px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+
+}
+
+.colonne{
+    padding: 4rem;
+}
+.colonne :last-child{
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: column;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+}
+
+a{
+    display: inline-block;
+    padding: 12px 30px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all.3s;
+    font-weight: 600;
+
+}
+
+a:hover{
+    background-color: #f1f1f1;
+    color: rgb(105, 112, 105);
+}
+
+a:last-child{
+    text-align: center;
+}
+
+.mail{
+    border-radius: 20px;
+}
+
+.mg{
+    padding-left: 20%;
+    padding-top: 5%;
+}
+
+h1{
+    margin-bottom: 15px;
+}
+
+.mail-bt{
+    width: 100%;
+    border: none;
+    background-color: #f1f1f1;
+    padding: 20px 30px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: box-shadow .2s;
+
+}
+
+.mail-bt:focus{
+        outline: none;
+        box-shadow: 0 0 0 2px black;
+    }
+
+
+form{
+    margin-top: 3rem;
+
+}
+form>*{
+        margin-top: 1rem;
+    }
+
+
+button{
+    background-color: cornflowerblue;
+    color: white;
+    border: none;
+    padding: 20px 40px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all .2s;
+}
+
+button:active{
+    background-color: white;
+
+}
+
+input[type=checkbox] {
+    accent-color: cornflowerblue;
+    padding-top: 20px;
+}
+
+    </style>
+
+    <div class="carte">
+        <div class="colonne">
+            <h1>Se connecter</h1>
+            <p>Entrer dans une nouvelle vision ,en vous connectant.</p>
+            <form class="container">
+                <div class="mail">
+                    <input type="text" class="mail-bt" name="mail" id="mail" placeholder="Entrer votre email" required>
+                </div>
+                <div class="mail">
+                    <input type="password" class="mail-bt" name="pass" id="pass" placeholder="Entrer votre mot de passe" required><br><br>
+                    <input type="checkbox" checked>Remember Me</input>
+
+                </div>
+                <div class="sign">
+                    <button type="button">Se connecter</button>
+
+                </div>
+                <p>Allons-y</p>
+                <div class="button-social">
+                   
+                </div>
+            </form>
+        </div>
+        <div class="colonne">
+            <h2>Bienvenue sur Rix</h2>
+            <p>Si c'est la première fois, veuillez vous enregister</p>
+            <a href="#">S'enregister</a>
+            <p></p>
+            <br>
+            <img class="mg" src="image/image.png" alt="" width="50%" align="center">
+            <p align="center">Just do it</p>
+        </div>
+    </div>
+</body>
+</html>
